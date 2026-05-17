@@ -1,0 +1,12 @@
+{
+  "name": "astrotiro",
+  "version": "1.0.0",
+  "description": "Jogo shoot 'em up espacial - Projeto CCP120 Programação Full Stack",
+  "main": "servidor.js",
+  "scripts": {
+    "start": "node servidor.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

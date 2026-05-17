@@ -1,0 +1,366 @@
+/* ============================================================
+   RESET BÁSICO
+   ============================================================ */
+
+/* Remove margens e paddings padrões dos elementos para garantir 
+   consistência visual entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* faz padding e border não somarem ao tamanho final */
+}
+
+
+/* ============================================================
+   ESTILO GERAL DO BODY
+   ============================================================ */
+
+body {
+    /* Tema espacial: fundo escuro com gradiente sutil */
+    background: linear-gradient(180deg, #0a0a1a 0%, #1a1a2e 100%);
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+
+    /* Flexbox vertical para garantir que o footer fique no rodapé */
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ============================================================
+   CABEÇALHO (HEADER)
+   ============================================================ */
+
+header {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid #00ffff; /* linha ciano marcante */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #00ffff; /* ciano para combinar com a cor da nave */
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* glow espacial */
+}
+
+.subtitulo {
+    color: #aaaaaa;
+    font-size: 1rem;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+
+/* ============================================================
+   MENU DE NAVEGAÇÃO (NAV)
+   ============================================================ */
+
+nav {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+}
+
+/* Flexbox horizontal para os itens do menu */
+nav ul {
+    list-style: none;            /* remove os marcadores da lista */
+    display: flex;
+    justify-content: center;     /* centraliza horizontalmente */
+    gap: 30px;                   /* espaço entre os links */
+    flex-wrap: wrap;             /* quebra linha em telas pequenas */
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;   /* animação suave no hover */
+}
+
+/* Efeito ao passar o mouse */
+nav a:hover {
+    background-color: rgba(0, 255, 255, 0.2);
+    color: #00ffff;
+}
+
+/* Estilo do link da página atual */
+nav a.ativo {
+    background-color: #00ffff;
+    color: #0a0a1a;
+    font-weight: bold;
+}
+
+
+/* ============================================================
+   CONTEÚDO PRINCIPAL (MAIN)
+   ============================================================ */
+
+main {
+    flex: 1;                     /* ocupa todo o espaço disponível */
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;              /* centraliza horizontalmente */
+    padding: 40px 20px;
+}
+
+main section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: #00ffff;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #cccccc;
+}
+
+
+/* ============================================================
+   GRID DE MECÂNICAS (PÁGINA PRINCIPAL)
+   ============================================================ */
+
+/* Flexbox horizontal com quebra automática para os cards */
+.grid-mecanicas {
+    display: flex;
+    flex-wrap: wrap;             /* permite quebrar em várias linhas */
+    gap: 20px;                   /* espaço entre os cards */
+    justify-content: center;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1 1 250px;             /* cresce, encolhe, base de 250px */
+    max-width: 350px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* levanta o card ao passar o mouse */
+    border-color: #00ffff;
+}
+
+
+/* ============================================================
+   CHAMADA PARA AÇÃO (CTA)
+   ============================================================ */
+
+.cta {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.botao-grande {
+    display: inline-block;
+    background-color: #00ffff;
+    color: #0a0a1a;
+    text-decoration: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 6px;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+.botao-grande:hover {
+    background-color: #ffffff;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+    transform: scale(1.05);
+}
+
+
+/* ============================================================
+   PÁGINA DO DESENVOLVEDOR
+   ============================================================ */
+
+/* Card do currículo do desenvolvedor */
+.dev-curriculo {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.dev-curriculo h3 {
+    color: #00ffff;
+    margin-bottom: 15px;
+}
+
+.dev-curriculo p {
+    margin-bottom: 10px;
+}
+
+/* Seção de créditos e referências */
+.creditos {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.creditos ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    color: #cccccc;
+}
+
+
+/* ============================================================
+   PÁGINA DO JOGO
+   ============================================================ */
+
+/* Layout em flexbox: canvas à esquerda, instruções à direita */
+.pagina-jogo {
+    display: flex;
+    flex-wrap: wrap;             /* em telas pequenas, vira coluna */
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Container do canvas com posicionamento relativo para o botão sobreposto */
+.area-jogo {
+    position: relative;
+    display: inline-block;
+}
+
+canvas {
+    display: block;
+    border: 2px solid #00ffff;
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+    background-color: #0a0a1a;
+}
+
+/* Botão de iniciar sobreposto ao canvas */
+#botao-iniciar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    /* centraliza exatamente */
+    background-color: #00ffff;
+    color: #0a0a1a;
+    border: none;
+    padding: 20px 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+    transition: all 0.3s ease;
+}
+
+#botao-iniciar:hover {
+    background-color: #ffffff;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Reposiciona o botão quando é exibido como "Jogar Novamente" após o game over */
+#botao-iniciar.reinicio {
+    top: 70%; /* Move o botão para baixo do texto GAME OVER */
+}
+
+/* Caixa de instruções ao lado do canvas */
+.instrucoes {
+    flex: 1 1 300px;
+    max-width: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 25px;
+}
+
+/* Lista de controles */
+.controles {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.controles li {
+    padding: 8px 0;
+    color: #cccccc;
+}
+
+/* Estilo das teclas (<kbd>) */
+kbd {
+    display: inline-block;
+    background-color: #1a1a2e;
+    border: 1px solid #00ffff;
+    border-radius: 4px;
+    padding: 3px 8px;
+    font-family: monospace;
+    color: #00ffff;
+    margin-right: 5px;
+}
+
+/* Texto de destaque para o aviso de perigo */
+.destaque-perigo {
+    color: #ff3333;
+    font-weight: bold;
+}
+
+
+/* ============================================================
+   RODAPÉ (FOOTER)
+   ============================================================ */
+
+footer {
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid rgba(0, 255, 255, 0.2);
+    color: #888888;
+    font-size: 0.9rem;
+}
+
+
+/* ============================================================
+   RESPONSIVIDADE (TELAS MENORES)
+   ============================================================ */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    canvas {
+        max-width: 100%;
+        height: auto;
+    }
+}

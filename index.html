@@ -1,17 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <title>AstroTiro</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Conexão do HTML com o CSS -->
-        <link rel="stylesheet" href="estilos.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroTiro - Sobre o Jogo</title>
+    <!-- Link para o arquivo CSS externo, que aplica os estilos em todas as páginas -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!-- Cabeçalho com o título do projeto -->
+    <header>
+        <h1>AstroTiro</h1>
+        <p class="subtitulo">Um shoot 'em up espacial</p>
+    </header>
 
-    <body>
-        <!-- [BUG]-> Havia colocado o tamanho dele no CSS, porém só altera o tamanho da janela e não a resolução interna.-->
-        <canvas id="canvas" width="800" height="800"></canvas>
-    </body>
+    <!-- Menu de navegação presente em todas as páginas -->
+    <nav>
+        <ul>
+            <li><a href="index.html" class="ativo">Sobre o Jogo</a></li>
+            <li><a href="desenvolvedor.html">Desenvolvedor</a></li>
+            <li><a href="jogo.html">Jogar</a></li>
+        </ul>
+    </nav>
 
-    <script src="jogo.js"></script>
+    <!-- Conteúdo principal da página -->
+    <main>
+        <section class="apresentacao">
+            <h2>Sobre o Jogo</h2>
+            <p>
+                AstroTiro é um "shoot 'em up" de tema espacial onde você assume o controle 
+                de uma nave de combate na fronteira do espaço sideral. Sua missão é simples: 
+                sobreviver à invasão inimiga abatendo o máximo de naves possível.
+            </p>
+        </section>
+
+        <section class="mecanicas">
+            <h2>Mecânicas</h2>
+            <div class="grid-mecanicas">
+                <div class="card">
+                    <h3>Movimentação</h3>
+                    <p>Controle livre nas quatro direções dentro do espaço de combate.</p>
+                </div>
+                <div class="card">
+                    <h3>Combate</h3>
+                    <p>Sistema de tiro com cooldown automático para manter o ritmo de jogo.</p>
+                </div>
+                <div class="card">
+                    <h3>Vida e Dano</h3>
+                    <p>A nave possui 100 pontos de vida. Cada inimigo que atinge a nave causa 10 de dano. Inimigos que escapam pela esquerda causam 5 de dano.</p>
+                </div>
+                <div class="card">
+                    <h3>Dificuldade Progressiva</h3>
+                    <p>A velocidade dos inimigos e da nave aumentam exponencialmente com o tempo, exigindo reflexos cada vez mais precisos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Pronto para o combate?</h2>
+            <a href="jogo.html" class="botao-grande">Iniciar Jogo</a>
+        </section>
+    </main>
+
+    <!-- Rodapé com informações adicionais -->
+    <footer>
+        <p>Projeto desenvolvido para a disciplina CCP120 - Programação Full Stack — FEI</p>
+    </footer>
+</body>
 </html>

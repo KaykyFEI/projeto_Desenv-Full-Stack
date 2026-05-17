@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroTiro - Jogar</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>AstroTiro</h1>
+        <p class="subtitulo">Um shoot 'em up espacial</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Sobre o Jogo</a></li>
+            <li><a href="desenvolvedor.html">Desenvolvedor</a></li>
+            <li><a href="jogo.html" class="ativo">Jogar</a></li>
+        </ul>
+    </nav>
+
+    <main class="pagina-jogo">
+        <!-- Área do jogo: contém o canvas e o botão de início -->
+        <section class="area-jogo">
+            <!-- O canvas é "a tela" onde o jogo é desenhado pelo JavaScript -->
+            <canvas id="canvas" width="800" height="600"></canvas>
+
+            <!-- Botão de início que cobre o canvas até o jogador clicar -->
+            <button id="botao-iniciar">Iniciar Jogo</button>
+        </section>
+
+        <!-- Explicação dos controles e objetivo do jogo -->
+        <aside class="instrucoes">
+            <h2>Como Jogar</h2>
+            
+            <h3>Objetivo</h3>
+            <p>
+                Sobreviva o máximo possível abatendo as naves inimigas que invadem o setor. 
+                Cada inimigo abatido aumenta sua pontuação. O jogo termina quando sua vida chega a zero.
+            </p>
+
+            <h3>Controles</h3>
+            <ul class="controles">
+                <li><kbd>W</kbd> ou <kbd>↑</kbd> — Mover para cima</li>
+                <li><kbd>S</kbd> ou <kbd>↓</kbd> — Mover para baixo</li>
+                <li><kbd>A</kbd> ou <kbd>←</kbd> — Mover para a esquerda</li>
+                <li><kbd>D</kbd> ou <kbd>→</kbd> — Mover para a direita</li>
+                <li><kbd>Espaço</kbd> — Disparar projétil</li>
+            </ul>
+
+            <h3>Atenção</h3>
+            <p>
+                A <span class="destaque-perigo">zona vermelha à esquerda</span> é a fronteira de invasão. 
+                Cada inimigo que cruzá-la causa dano à sua nave. Mantenha distância das naves inimigas — 
+                o contato direto também é fatal.
+            </p>
+
+            <h3>Dificuldade</h3>
+            <p>
+                A velocidade dos inimigos aumenta progressivamente com o tempo. Quanto mais você sobrevive, 
+                mais desafiador o combate fica.
+            </p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Projeto desenvolvido para a disciplina CCP120 - Programação Full Stack — FEI</p>
+    </footer>
+
+    <!-- 
+        Script do jogo. Colocado no final do body para garantir que o canvas 
+        já exista no DOM quando o JavaScript tentar acessá-lo.
+    -->
+    <script src="js/jogo.js"></script>
+</body>
+</html>
